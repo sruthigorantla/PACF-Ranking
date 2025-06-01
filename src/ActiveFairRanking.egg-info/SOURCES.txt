@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/ActiveFairRanking.egg-info/PKG-INFO
+src/ActiveFairRanking.egg-info/SOURCES.txt
+src/ActiveFairRanking.egg-info/dependency_links.txt
+src/ActiveFairRanking.egg-info/requires.txt
+src/ActiveFairRanking.egg-info/top_level.txt

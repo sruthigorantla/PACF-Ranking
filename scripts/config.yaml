@@ -1,0 +1,94 @@
+num_of_items: 100 # number of items in the ranking
+seed: 1400
+
+# datasets: ["german", "compas", "geo", "arith", "har", "steps"]
+datasets: ["german", "compas"]
+
+powers_of_two: 20
+num_of_exps: 10 # number of times experiment to run for each power of two
+
+# parameters for the group-wise setting
+group_wise:
+  merge_mode: "heap" # choose from "ftp", "heap", "play"
+
+# Config details related to the metric
+metrics:
+  dimensions: ["lpq_norm"]
+  lpq_norm:
+    p_norm: 1
+    q_norm: 1
+
+# used in beat_the_pivot
+beat_the_pivot:
+  subset_size: 2 
+
+dataset_config:
+  compas:
+    protected_group: ["race", "sex"]
+    path: 
+      race: "./data/COMPAS/ProPublica_race.csv"
+      sex: "./data/COMPAS/ProPublica_sex.csv"
+    epsilon: 0.001
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+  german:
+    protected_group: ["age25", "age35", "age"] # choose amongst "age25", "age35", "age" or "age_gender"
+    multi_group: True
+    path:
+      age25: "./../data/GermanCredit/GermanCredit_age25.csv"
+      age35: "./../data/GermanCredit/GermanCredit_age35.csv"
+      age: "./../data/GermanCredit/GermanCredit_age.csv"
+      age_gender: "./../data/GermanCredit/GermanCredit_age_gender.csv"
+    epsilon: 0.01
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+  geo:
+    num_of_groups: 2
+    discount: 0.875
+    pvals: [0.8, 0.2]
+    # pvals: [0.3,0.2,0.1,0.1,0.1,0.1,0.1]
+    # pvals: [0.6, 0.2, 0.2]
+    # pvals: [0.4,0.1,0.1,0.1,0.1,0.1,0.1]
+    epsilon: 0.1
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+    # phi: 1.0 # allowed values: 1, 0.5, 0.25, 0.125, -1 : -1 means  phi = size of the group
+  arith:
+    num_of_groups: 2
+    discount: 0.04
+    pvals: [0.8, 0.2]
+    # pvals: [0.3,0.2,0.1,0.1,0.1,0.1,0.1]
+    # pvals: [0.6, 0.2, 0.2]
+    # pvals: [0.4,0.1,0.1,0.1,0.1,0.1,0.1]
+    epsilon: 0.01
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+  steps:
+    num_of_groups: 2
+    discount: 0.2
+    window_size: 5
+    pvals: [0.8, 0.2]
+    # pvals: [0.6, 0.2, 0.2]
+    # pvals: [0.2,0.2,0.2,0.2,0.2]
+    # pvals: [0.3,0.2,0.1,0.1,0.1,0.1,0.1]
+    epsilon: 0.05
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+  har:
+    num_of_groups: 2
+    pvals: [0.8, 0.2]
+    # pvals: [0.6, 0.2, 0.2]
+    # pvals: [0.2,0.2,0.2,0.2,0.2]
+    # pvals: [0.3,0.2,0.1,0.1,0.1,0.1,0.1]
+    epsilon: 0.1
+    delta: 0.1
+    theta_bias: [1.0, 1.0]
+
+# Logging details
+logging:
+  level: WARNING # levels of logging: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  file: "experiment.log"
+
+checkpoint:
+  path: "checkpoints/"

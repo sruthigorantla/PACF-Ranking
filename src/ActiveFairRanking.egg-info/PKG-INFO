@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ActiveFairRanking
+Version: 0.1
+Summary: Code for Active Fair Ranking
+Home-page: https://sites.google.com/view/sruthigorantla/home
+Author: Sruthi Gorantla
+Author-email: gorantlas@iisc.ac.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent

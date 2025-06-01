@@ -1,0 +1,6 @@
+matplotlib
+omegaconf
+pandas
+scipy
+seaborn
+tqdm
