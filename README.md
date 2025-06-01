@@ -147,7 +147,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 If you use this code in your research, please cite:
 ```
-@misc{active-fair-ranking,
+@misc{PACF-ranking,
   author = {Sruthi Gorantla and Sara Ahmadian},
   title = {Fair Active Ranking from Pairwise Preferences},
   year = {2024},
