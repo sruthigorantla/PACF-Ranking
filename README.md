@@ -148,10 +148,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 If you use this code in your research, please cite:
 ```
 @misc{active-fair-ranking,
-  author = {Sruthi Gorantla},
-  title = {Active Fair Ranking},
+  author = {Sruthi Gorantla and Sara Ahmaian},
+  title = {Fair Active Ranking from Pairwise Preerences},
   year = {2024},
-  publisher = {GitHub},
-  url = {https://github.com/yourusername/active-fair-ranking}
+  publisher = {arXiv},
+  url = {https://arxiv.org/abs/2402.03252}
 }
 ```
