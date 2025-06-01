@@ -149,7 +149,7 @@ If you use this code in your research, please cite:
 ```
 @misc{active-fair-ranking,
   author = {Sruthi Gorantla and Sara Ahmadian},
-  title = {Fair Active Ranking from Pairwise Preerences},
+  title = {Fair Active Ranking from Pairwise Preferences},
   year = {2024},
   publisher = {arXiv},
   url = {https://arxiv.org/abs/2402.03252}
